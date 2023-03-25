@@ -1,0 +1,16 @@
+<h1>ajoutez une sous categorie</h1>
+<form (ngSubmit)="ajoutscategorie()">
+    <div class="container">
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">nom scategorie</label>
+    <input type="text" class="form-control" name="nomscategorie" id="nomscategorie" placeholder="nomscategorie" [(ngModel)]="scategorie.nomscategorie">
+  </div>
+  
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">image</label>
+    <input type="file" class="form-control" name="imagescat" id="imagescat"  [(ngModel)]="scategorie.imagescat">
+  </div>
+  
+  <button type="submit" class="btn btn-success">submitt</button>
+</div>
+</form>

@@ -1,0 +1,47 @@
+<h1>liste des articles</h1>
+<div class="container">
+     <button type="button" class="btn btn-success" routerLink="/insertart">ajouter</button>
+    
+     <div class="col-md-2">
+        Filtre par catégorie <select class="form-control col-lg-8"
+        [(ngModel)]="term">
+        <option *ngFor="let c of categories" ></option>
+        <option *ngFor="let c of categories"
+        >{{c.nomcategorie}}</option>
+        </select>
+        </div>
+<table *ngIf="articles" datatable class="table table-hover table table-striped table-bordred">
+    <thead>
+<tr>
+    <th>image</th>
+    <th>
+        reference
+    </th>
+    
+    <th>
+        designation
+    </th>
+    <th>quantite</th>
+    <th>marque</th>
+    <th>modifier</th>
+    <th>supprimer</th>
+    
+</tr>
+    </thead>
+
+    <tbody>
+<tr *ngFor="let a of articles">
+    <td ><img src="{{a.imageart}}" width="60" height="60"></td>
+    <td>{{a.reference}}</td>
+    
+    <td>{{a.designation}}</td>
+    <td>{{a.qtestock}}</td>
+    <td>{{a.marque}}</td>
+    
+   <td> <button type="button" class="btn btn-primary" routerLink="/modifart/{{a._id}}"> modifier</button></td>
+    <td><button type="button" class="btn btn-danger" (click)="supparticle(a._id)" >supprimer</button></td>
+</tr>
+    </tbody>
+</table>
+
+</div>

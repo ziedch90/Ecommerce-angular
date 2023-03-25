@@ -1,0 +1,15 @@
+<h1>ajouter categorie</h1>
+<form (ngSubmit)="ajoutcategorie()">
+    <div class="container">
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">nom categorie</label>
+    <input type="text" class="form-control" name="nomcategorie" id="nomcategorie" placeholder="nomcategorie" [(ngModel)]="categorie.nomcategorie">
+  </div>
+  
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">image</label>
+    <input type="file" class="form-control" name="imagecategorie" id="imagecategorie"  [(ngModel)]="categorie.imagecategorie">
+  </div>
+  <button type="submit" class="btn btn-success">submitt</button>
+</div>
+</form>

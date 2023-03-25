@@ -1,0 +1,29 @@
+<form (ngSubmit)="updatearticle(article._id)">
+    <div class="container">
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">reference</label>
+    <input type="text" class="form-control" name="reference" id="reference" placeholder="reference" [(ngModel)]="article.reference">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">designation </label>
+    <input type="text" class="form-control" name="designation" id="designation" placeholder="designation" [(ngModel)]="article.designation">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">prix</label>
+    <input type="number" class="form-control" name="prix" id="prix" placeholder="prix" [(ngModel)]="article.prix">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">quantite</label>
+    <input type="number" class="form-control" name="qtestock" id="qtestock" placeholder="qtestock" [(ngModel)]="article.qtestock">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">marque</label>
+    <input type="text" class="form-control" name="marque" id="marque" placeholder="marque" [(ngModel)]="article.marque">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">image</label>
+    <input type="file" class="form-control" name="imageart" id="imageart" placeholder="marque">
+  </div>
+  <button type="submit" class="btn btn-success">ajouter</button>
+</div>
+</form>
